@@ -37,4 +37,4 @@ function changeSlide() {
 
 showSlide(currentSlide);
 
-setInterval(changeSlide, 3000);
+setInterval(changeSlide, 2000);
