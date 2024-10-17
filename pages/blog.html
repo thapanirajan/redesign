@@ -1,0 +1,266 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Blog Page</title>
+    <link rel="stylesheet" href="/CSS/styles.css" />
+    <style>
+      body,
+      h1,
+      h2,
+      h3,
+      p {
+        margin: 0;
+        padding: 0;
+      }
+
+      .blog-container {
+        max-width: 1200px;
+        margin: 40px auto;
+        padding: 0 20px;
+      }
+
+      .blog-heading {
+        font-size: 3rem;
+        text-align: center;
+        padding: 20px 0;
+        color: #1f2937;
+        margin-bottom: 40px;
+      }
+
+      .blog-grid {
+        display: grid;
+        grid-template-columns: auto auto;
+        gap: 30px;
+      }
+
+      .blog-card {
+        background-color: #ffffff;
+        border-radius: 8px;
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        display: flex;
+        flex-direction: column;
+        transition: scale 0.3s ease-in-out;
+      }
+
+      .blog-card:hover {
+        scale: 1.05;
+      }
+
+      .blog-card-image {
+        height: 200px;
+        background-color: hsl(124, 41%, 30%);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+
+      .blog-card-image i {
+        font-size: 4rem;
+        color: #ffffff;
+      }
+
+      .blog-card-content {
+        padding: 20px;
+      }
+
+      .blog-card h2 {
+        color: #1f2937;
+        font-size: 1.5rem;
+        margin-bottom: 10px;
+      }
+
+      .blog-card p {
+        color: #4b5563;
+        font-size: 1rem;
+        line-height: 1.5;
+      }
+
+      .blog-card-footer {
+        padding: 15px 20px;
+        background-color: #f3f4f6;
+        text-align: right;
+      }
+
+      .read-more {
+        color: #5dbb63;
+        text-decoration: none;
+        font-weight: bold;
+      }
+
+      .read-more:hover {
+        text-decoration: underline;
+      }
+    </style>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"
+    />
+  </head>
+  <body>
+    <header>
+      <div class="logo">
+        <h1>Image Grocery</h1>
+      </div>
+      <nav>
+        <ul>
+          <li><a href="/index.html">Home</a></li>
+          <li><a href="/pages/product.html">Products</a></li>
+          <li><a href="/pages/blog.html" style="color: yellow">Blog</a></li>
+          <li><a href="/pages/research.html">Research</a></li>
+          <li><a href="/pages/signup.html">Sign Up</a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <div class="blog-container">
+      <h1 class="blog-heading">Our Blogs &#9998;</h1>
+      <div class="blog-grid">
+        <div class="blog-card">
+          <div class="blog-card-image">
+            <i class="fas fa-carrot"></i>
+          </div>
+          <div class="blog-card-content">
+            <h2>Importance of Vegetables</h2>
+            <p>
+              Vegetables contain antioxidants and phytochemicals that can help
+              protect you from diseases. Regular consumption can lower the risk
+              of type 2 diabetes and other health issues.
+            </p>
+          </div>
+          <div class="blog-card-footer">
+            <a href="#" class="read-more">Read More</a>
+          </div>
+        </div>
+
+        <div class="blog-card">
+          <div class="blog-card-image">
+            <i class="fas fa-apple-alt"></i>
+          </div>
+          <div class="blog-card-content">
+            <h2>The Importance of Eating Fresh Fruits</h2>
+            <p>
+              Fresh fruits are packed with vitamins, minerals, and antioxidants.
+              They can boost your immune system, improve digestion, and reduce
+              the risk of chronic diseases.
+            </p>
+          </div>
+          <div class="blog-card-footer">
+            <a href="#" class="read-more">Read More</a>
+          </div>
+        </div>
+
+        <div class="blog-card">
+          <div class="blog-card-image">
+            <i class="fas fa-seedling"></i>
+          </div>
+          <div class="blog-card-content">
+            <h2>Benefits of Organic Farming</h2>
+            <p>
+              Organic farming practices promote soil health, biodiversity, and
+              reduce environmental pollution. Learn how choosing organic produce
+              can benefit both your health and the planet.
+            </p>
+          </div>
+          <div class="blog-card-footer">
+            <a href="#" class="read-more">Read More</a>
+          </div>
+        </div>
+
+        <div class="blog-card">
+          <div class="blog-card-image">
+            <i class="fas fa-utensils"></i>
+          </div>
+          <div class="blog-card-content">
+            <h2>Meal Planning for Busy Families</h2>
+            <p>
+              Discover effective strategies for meal planning that save time,
+              reduce stress, and ensure your family enjoys nutritious meals
+              throughout the week. Learn how to balance variety, nutrition, and
+              budget-friendly options for successful family meal planning.
+            </p>
+          </div>
+          <div class="blog-card-footer">
+            <a href="#" class="read-more">Read More</a>
+          </div>
+        </div>
+
+        <div class="blog-card">
+          <div class="blog-card-image">
+            <i class="fas fa-leaf"></i>
+          </div>
+          <div class="blog-card-content">
+            <h2>Superfoods: Fact or Fiction?</h2>
+            <p>
+              Explore the truth behind superfoods. Are they really as super as
+              they claim? Learn about nutrient-dense foods and how to
+              incorporate them into your diet.
+            </p>
+          </div>
+          <div class="blog-card-footer">
+            <a href="#" class="read-more">Read More</a>
+          </div>
+        </div>
+
+        <div class="blog-card">
+          <div class="blog-card-image">
+            <i class="fas fa-shopping-basket"></i>
+          </div>
+          <div class="blog-card-content">
+            <h2>Smart Grocery Shopping Tips</h2>
+            <p>
+              Learn how to shop smarter at the grocery store. From creating
+              lists to understanding food labels, these tips will help you save
+              money and make healthier choices.
+            </p>
+          </div>
+          <div class="blog-card-footer">
+            <a href="#" class="read-more">Read More</a>
+          </div>
+        </div>
+
+        <div class="blog-card">
+          <div class="blog-card-image">
+            <i class="fas fa-recycle"></i>
+          </div>
+          <div class="blog-card-content">
+            <h2>Reducing Food Waste at Home</h2>
+            <p>
+              Discover practical ways to reduce food waste in your household.
+              Learn about proper food storage, creative recipes for leftovers,
+              and composting techniques.
+            </p>
+          </div>
+          <div class="blog-card-footer">
+            <a href="#" class="read-more">Read More</a>
+          </div>
+        </div>
+
+        <div class="blog-card">
+          <div class="blog-card-image">
+            <i class="fas fa-heart"></i>
+          </div>
+          <div class="blog-card-content">
+            <h2>Heart-Healthy Eating Habits</h2>
+            <p>
+              Explore dietary choices that promote heart health. Learn about
+              foods that can help lower cholesterol, reduce blood pressure, and
+              improve overall cardiovascular well-being.
+            </p>
+          </div>
+          <div class="blog-card-footer">
+            <a href="#" class="read-more">Read More</a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <footer>
+      <section class="hey">
+        <p>Location: Lazimpath, Kathmandu</p>
+        <p>Infront of Mark International Kidney Hospital</p>
+      </section>
+    </footer>
+  </body>
+</html>

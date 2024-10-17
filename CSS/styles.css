@@ -1,0 +1,94 @@
+body {
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #fafafa;
+  color: #333333;
+}
+
+header {
+  background-color: hsl(124, 41%, 30%);;
+  color: #ffffff;
+  padding: 1.5rem 2rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+header h1 {
+  margin: 0;
+  font-size: 2rem;
+  letter-spacing: 1px;
+}
+
+nav ul {
+  list-style: none;
+  padding: 0;
+  display: flex;
+  gap: 1.5rem;
+}
+
+nav a {
+  text-decoration: none;
+  color: #ffffff;
+  font-weight: bold;
+  transition: color 0.3s;
+}
+
+nav a:hover {
+  color: #ffeb3b;
+}
+
+/* research.html */
+.compare-container {
+  width: 80%;
+  margin: 2rem auto;
+  display: flex;
+  flex-direction: column;
+  gap: 4rem;
+}
+.compare {
+  display: flex;
+  justify-content: space-between;
+}
+.compare div {
+  font-size: 1.8rem;
+}
+.compare img {
+  height: 300px;
+  object-fit: contain;
+  width: 600px;
+  box-shadow: 2px 4px 8px rgba(0, 0, 0, 0.5);
+}
+
+/* Footer */
+footer {
+  background-color: #333333; /* Dark Accent */
+  color: #ffffff; /* White for text */
+  text-align: center;
+  padding: 2rem; /* Increased padding */
+}
+
+.hey {
+  margin-top: 1rem;
+}
+
+/* image slider  */
+/* Hero Section */
+.slider-container {
+  position: relative;
+  overflow: hidden; /* Hide overflow */
+}
+
+.slide {
+  display: none; /* Hide all slides by default */
+}
+
+.slide.active {
+  display: block; /* Show only the active slide */
+}
+
+.slide img {
+  width: 100%; /* Make images responsive */
+  height: auto;
+}

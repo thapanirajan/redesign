@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Signup</title>
+    <link rel="stylesheet" href="/CSS/styles.css" />
+    <style>
+      .form-container {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding: 4rem;
+      }
+
+      .form {
+        background-color: #ffffff;
+        border-radius: 8px;
+        box-shadow: 2px 4px 8px rgba(0, 0, 0, 0.5);
+        padding: 3rem;
+        width: 100%;
+        max-width: 400px;
+      }
+
+      .form h1 {
+        color: #4caf50;
+        margin-bottom: 1.5rem;
+        text-align: center;
+      }
+
+      form {
+        display: flex;
+        flex-direction: column;
+        gap: 1.5rem;
+      }
+
+      label {
+        font-weight: bold;
+        color: #333333;
+      }
+
+      input {
+        width: 100%;
+        padding: 0.75rem;
+        border: 1px solid #cccccc;
+        border-radius: 4px;
+        font-size: 1rem;
+        transition: border-color 0.3s;
+      }
+
+      input:focus {
+        outline: none;
+        border-color: #4caf50;
+      }
+
+      button {
+        width: 100%;
+        padding: 0.75rem;
+        background-color: #4caf50;
+        color: #ffffff;
+        border: none;
+        border-radius: 4px;
+        font-size: 1rem;
+        font-weight: bold;
+        cursor: pointer;
+        transition: background-color 0.3s;
+      }
+
+      button:hover {
+        background-color: #45a049;
+      }
+
+      footer {
+        background-color: #333333;
+        color: #ffffff;
+        text-align: center;
+        padding: 2rem;
+      }
+
+      .hey {
+        margin-top: 1rem;
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      <div class="logo">
+        <h1>Image Grocery</h1>
+      </div>
+      <nav>
+        <ul>
+          <li><a href="/index.html">Home</a></li>
+          <li><a href="/pages/product.html">Products</a></li>
+          <li><a href="/pages/blog.html">Blog</a></li>
+          <li><a href="/pages/research.html">Research</a></li>
+          <li>
+            <a href="/pages/signup.html" style="color: yellow">Sign Up</a>
+          </li>
+        </ul>
+      </nav>
+    </header>
+    <div class="form-container">
+      <div class="form">
+        <h1>Signup Form</h1>
+        <form action="#" onsubmit="submitForm(event)" id="form">
+          <label for="username">
+            Username <br />
+            <input type="text" name="username" placeholder="username" />
+          </label>
+          <label for="email">
+            Email <br />
+            <input type="email" name="email" placeholder="email" />
+          </label>
+          <label for="password">
+            Password <br />
+            <input type="password" name="password" placeholder="password" />
+          </label>
+          <button>Submit</button>
+        </form>
+      </div>
+    </div>
+    <footer>
+      <section class="hey">
+        <p>Location: Lazimpath, Kathmandu</p>
+        <p>In front of Mark International Kidney Hospital</p>
+      </section>
+    </footer>
+    <script src="/JS/app.js"></script>
+  </body>
+</html>

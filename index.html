@@ -1,103 +1,320 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Image Grocery</title>
-    <link rel="stylesheet" href="styles.css">
-</head>
-<body>
+    <link rel="stylesheet" href="CSS/styles.css" />
+
+    <style>
+      /* Hero Section */
+      .hero {
+        text-align: center;
+        padding: 3rem 2rem;
+        background-color: #f5f5dc;
+      }
+
+      .hero h2 {
+        font-size: 3rem;
+        margin: 0.5rem 0;
+      }
+
+      .hero span {
+        color: #047b10;
+        font-weight: bold;
+      }
+
+      .hero p {
+        font-size: 1.5rem;
+      }
+
+      /* Steps Section */
+      .steps {
+        display: flex;
+        justify-content: space-around;
+        padding: 3rem 0;
+      }
+
+      .step {
+        text-align: center;
+        border: 1px solid #047b10;
+        box-shadow: 2px 4px 8px rgba(0, 0, 0, 0.5);
+        padding: 0 2rem;
+        border-radius: 15px;
+      }
+
+      .step img {
+        width: 100px;
+        height: auto;
+        margin-bottom: 0.5rem;
+      }
+
+      /* Products Section */
+
+      .container {
+        padding: 3rem 2rem;
+        background-color: #f0f0f0;
+        border-radius: 8px;
+        box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+      }
+
+      .heading {
+        text-align: center;
+        margin-bottom: 2rem;
+        font-size: 2.5rem;
+        color: #4caf50;
+      }
+
+      .box-container {
+        display: grid;
+        grid-template-columns: auto auto auto auto auto;
+        gap: 15px;
+      }
+
+      .box-1 {
+        border: 1px solid green;
+        border-radius: 8px;
+        padding: 1.5rem;
+        text-align: center;
+        transition: transform 0.3s, box-shadow 0.3s;
+        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+      }
+
+      .box-1:hover {
+        transform: translateY(-10px);
+        box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+      }
+      .box-1 img {
+        width: 200px;
+        height: 200px;
+        object-fit: cover;
+      }
+      .btn {
+        display: inline-block;
+        background-color: #4caf50;
+        color: #ffffff;
+        padding: 0.75rem 1.5rem;
+        text-decoration: none;
+        border-radius: 5px;
+        margin-top: 1rem;
+        transition: background-color 0.3s;
+      }
+
+      /* Blog Section */
+      .blog {
+        text-align: center;
+        margin: 3rem 0;
+      }
+
+      .blog img {
+        width: 80%;
+        border-radius: 8px;
+      }
+
+      /* Blog Content */
+      .blog-content {
+        text-align: center;
+        margin: 2rem 0;
+      }
+
+      .blog-content p {
+        font-size: 1.2rem;
+        margin: 0.5rem 0;
+      }
+
+      /* Hero text styles */
+      .hero {
+        text-align: center;
+        padding: 3rem 2rem;
+        background-color: #f5f5dc;
+        position: relative;
+        z-index: 1;
+      }
+
+      .hero h2,
+      .hero p {
+        position: relative;
+        z-index: 2;
+      }
+      .slide img {
+        height: 300px;
+        width: 300px;
+        object-fit: cover;
+        box-shadow: 2px 4px 8px rgba(0, 0, 0, 0.5);
+        border-radius: 10px;
+      }
+
+      /* Blog instruction styling */
+      .blog-instruction {
+        font-size: 1.5rem;
+        color: #047b10;
+        font-weight: bold;
+        margin-bottom: 1rem;
+      }
+    </style>
+  </head>
+
+  <body>
     <header>
-        <div class="logo">
-            <h1>Image Grocery</h1>
-            </a>
-        </div>
-        <nav>
-            <ul>
-                <li><a href="index.html">Home</a></li>
-                <li><a href="blog.html">Blog</a></li>
-                <li><a href="product.html">Products</a></li>
-                <li><a href="#">Log In</a></li>
-                <li><a href="#">Sign Up</a></li>
-            </ul>
-        </nav>
+      <div class="logo">
+        <h1>Image Grocery</h1>
+      </div>
+      <nav>
+        <ul>
+          <li><a href="/index.html" style="color: yellow">Home</a></li>
+          <li><a href="/pages/product.html">Products</a></li>
+          <li><a href="/pages/blog.html">Blog</a></li>
+          <li><a href="/pages/research.html">Research</a></li>
+          <li><a href="/pages/signup.html">Sign Up</a></li>
+        </ul>
+      </nav>
     </header>
-    <h2 style="font-family: 'Times New Roman', Times, serif;">Fresh <span style="color: green;">Grocery</span><br>Everyday</h2>
-    <p>Get your healthy groceries at your doorsteps within<br>the comfort of your home</p>
-    <div class="image">
-        <img src="grocery.png">
-    </div>
-    <section class="steps">
+
+    <main>
+      <section class="hero">
+        <h2>Fresh <span>Grocery</span><br />Everyday</h2>
+        <p>
+          Get your healthy groceries at your doorsteps within<br />the comfort
+          of your home
+        </p>
+
+        <div class="slider-container">
+          <div class="slide active">
+            <img src="/images/grocery.png" alt="Grocery Image 1" />
+          </div>
+          <div class="slide">
+            <img src="/images/grocer.jpg" alt="Grocery Image 2" />
+          </div>
+          <div class="slide">
+            <img src="/images/grocer1.jpg" alt="Grocery Image 3" />
+          </div>
+          <div class="slide">
+            <img src="/images/grocer2.jpg" alt="Grocery Image 3" />
+          </div>
+          <div class="slide">
+            <img src="/images/grocer3.jpg" alt="Grocery Image 3" />
+          </div>
+          <div class="slide">
+            <img src="/images/grocer4.jpg" alt="Grocery Image 3" />
+          </div>
+        </div>
+      </section>
+
+      <p style="font-size: 3rem; text-align: center">Featured Product</p>
+      <section class="steps">
         <div class="step">
-            <div class="icon">
-                <img src="Screenshot_2024-09-14_132818-removebg-preview.png" alt="Fruits"> 
-            </div>
-            <p>Fruits</p>
+          <div class="icon">
+            <img
+              src="/images/Screenshot_2024-09-14_132818-removebg-preview.png"
+              alt="Fruits"
+            />
+          </div>
+          <p>Fruits</p>
         </div>
         <div class="step">
-            <div class="icon">
-                <img src="Screenshot_2024-09-14_132830-removebg-preview.png" alt="Vegetables">
-            </div>
-            <p>Vegetables</p>
+          <div class="icon">
+            <img
+              src="/images/Screenshot_2024-09-14_132830-removebg-preview.png"
+              alt="Vegetables"
+            />
+          </div>
+          <p>Vegetables</p>
         </div>
         <div class="step">
-            <div class="icon">
-                <img src="Screenshot_2024-09-14_132840-removebg-preview.png" alt="Milk and Cheese"> 
-            </div>
-            <p>Milk and Cheese</p>
+          <div class="icon">
+            <img
+              src="/images/Screenshot_2024-09-14_132840-removebg-preview.png"
+              alt="Milk and Cheese"
+            />
+          </div>
+          <p>Milk and Cheese</p>
         </div>
         <div class="step">
-            <div class="icon">
-                <img src="Screenshot_2024-09-14_132850-removebg-preview.png" alt="Meats">
-                
-            </div>
-            <p>Meat</p>
+          <div class="icon">
+            <img
+              src="/images/Screenshot_2024-09-14_132850-removebg-preview.png"
+              alt="Meat"
+            />
+          </div>
+          <p>Meat</p>
         </div>
         <div class="step">
-            <div class="icon">
-                <img src="Screenshot_2024-09-14_132856-removebg-preview.png" alt="Chips and Noodles">   
-            </div>
-            <p>Chips and Noodles</p>
+          <div class="icon">
+            <img
+              src="/images/Screenshot_2024-09-14_132856-removebg-preview.png"
+              alt="Chips and Noodles"
+            />
+          </div>
+          <p>Chips and Noodles</p>
         </div>
-    </section>
-    <section class="container">
+      </section>
+
+      <section class="container">
         <h1 class="heading">Our Products</h1>
         <div class="box-container">
-        <div class="box-1">
-            <img src="images.jpeg" alt="Fruits">
+          <div class="box-1">
+            <img src="/images/fruits.jpg" alt="Fruits" />
             <h3>Fruits</h3>
             <p>Buy fresh and healthy fruits</p>
-            <a href="#" class="btn">Buy Here</a>
+            <a href="product.html" class="btn">Buy Here</a>
+          </div>
+          <div class="box-1">
+            <img src="/images/veg.jpg" alt="Vegetables" />
+            <h3>Vegetables</h3>
+            <p>Buy fresh and healthy vegetables</p>
+            <a href="product.html" class="btn">Buy Here</a>
+          </div>
+          <div class="box-1">
+            <img src="/images/chips.jpg" alt="Chips" />
+            <h3>Chips</h3>
+            <p>Buy fresh and healthy chips</p>
+            <a href="product.html" class="btn">Buy Here</a>
+          </div>
+          <div class="box-1">
+            <img src="/images/milk.jpg" alt="milk" />
+            <h3>Milk and cheese</h3>
+            <p>Buy fresh milk and cheese</p>
+            <a href="product.html" class="btn">Buy Here</a>
+          </div>
+          <div class="box-1">
+            <img src="/images/chicken.jpg" alt="chicken" />
+            <h3>Meat</h3>
+            <p>Buy fresh meat</p>
+            <a href="product.html" class="btn">Buy Here</a>
+          </div>
         </div>
-            <div class="box-1">
-                <img src="resize-1726331368972891777potato.jpg" alt="Vegetables">
-                <h3>Vegetables</h3>
-                <p>Buy fresh and healthy fruits</p>
-                <a href="#" class="btn">Buy Here</a>
-            </div>
-                <div class="box-1">
-                    <img src="resize-1726331455410418118lays.jpeg" alt="Lays">
-                    <h3>Chips</h3>
-                    <p>Buy fresh and healthy fruits</p>
-                    <a href="#" class="btn">Buy Here</a>
-                </div>
-    </div>
-    </section>
-    <div class="blog">
-        <a href="blog.html">
-            <img src="vegetables.jpeg">
-    </a>
-    </div>
-    <div class="blog-content">
-        <p style="font-size: 50px;">View our weekly blog on our website</p> 
-        <p>Join our blog page for new and exiting news</p>
-    </div>
-    
-<footer>
-    <section class="hey">
+      </section>
+
+      <section class="blog">
+        <p class="blog-instruction">
+          Click on this image to go to our blog page
+        </p>
+        <a href="/pages/blog.html">
+          <img
+            src="/images/veg.jpg"
+            alt="Vegetables Blog Image"
+            style="
+              width: 90%;
+              height: 700px;
+              object-fit: cover;
+              border-radius: 10px;
+              box-shadow: 2px 4px 8px rgba(0, 0, 0, 0.5);
+            "
+          />
+        </a>
+      </section>
+      <section class="blog-content">
+        <p>View our weekly blog on our website</p>
+        <p>Join our blog page for new and exciting news</p>
+      </section>
+    </main>
+
+    <footer>
+      <section class="hey">
         <p>Location: Lazimpath, Kathmandu</p>
-        <p>Infront of Mark International Kidney Hospital</p>
-    </section>
-</footer>
-</body>
+        <p>In front of Mark International Kidney Hospital</p>
+      </section>
+    </footer>
+    <script src="JS/app.js"></script>
+  </body>
 </html>
