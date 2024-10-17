@@ -39,6 +39,13 @@ nav a:hover {
   color: #ffeb3b;
 }
 
+.logo a {
+  text-decoration: none;
+  color: #ffffff;
+  font-weight: bold;
+  transition: color 0.3s;
+}
+
 /* research.html */
 .compare-container {
   width: 80%;
